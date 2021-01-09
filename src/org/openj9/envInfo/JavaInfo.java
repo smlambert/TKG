@@ -126,4 +126,21 @@ public class JavaInfo {
             return null;
         }
     }
+
+    public String getJDKVendor() {
+        String vendor = System.getProperty("java.vendor");
+        System.out.println("System.getProperty('java.vendor')=" + vendor + "\n");
+        vendor = vendor.toLowerCase();
+        if (vendor.contains("adoptopenjdk")) {
+            return "adoptopenjdk";
+        } else if (vendor.contains("ibm")) {
+            return "ibm";
+        } else if (vendor.contains("alibaba")) {
+            return "alibaba";
+        } else {
+            System.out.println("Cannot determine System.getProperty('java.vendor')=" + vendor + "\n");
+            return null;
+        }
+    }
+
 }

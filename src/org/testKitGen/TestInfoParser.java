@@ -51,6 +51,17 @@ public class TestInfoParser {
 		}
 		if (!isValidImpl) return null;
 
+		// Do not generate make target if vendor doesn't match the exported vendor
+		NodeList vendorNodes = testEle.getElementsByTagName("vendor");
+
+		boolean isValidVendor = vendorNodes.getLength() == 0;
+		if (!isValidVendor) {
+			List<String> vendors = new ArrayList<String>();
+			getElements(vendors, "vendors", "vendor", Constants.ALLVENDORS, ti.getTestCaseName());
+			isValidVendor = vendors.contains(arg.getImpl());
+		}
+		if (!isValidVendor) return null;
+
 		// Do not generate make target if subset doesn't match the exported jdk_version
 		NodeList subsets = testEle.getElementsByTagName("subset");
 
