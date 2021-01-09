@@ -137,6 +137,16 @@ public class JavaInfo {
             return "ibm";
         } else if (vendor.contains("alibaba")) {
             return "alibaba";
+        } else if (vendor.contains("amazon")) {
+            return "amazon";
+        } else if (vendor.contains("azul")) {
+            return "azul";
+        }  else if (vendor.contains("sap")) {
+            return "sap";
+        } else if (vendor.contains("bellsoft")) {
+            return "bellsoft";
+        } else if (vendor.contains("oracle")) {
+            return "oracle";
         } else {
             System.out.println("Cannot determine System.getProperty('java.vendor')=" + vendor + "\n");
             return null;
