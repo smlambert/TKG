@@ -43,6 +43,7 @@ getFileWithRetry()
 		if [ "$count" -gt 0 ]; then
 			sleep_time=300
 			echo "error code: $rt_code. Sleep $sleep_time secs, then retry $count..."
+			echo "Error message is: $errormsg"
 			sleep $sleep_time
 
 			echo "check for $FILE. If found, the file will be removed."
@@ -53,7 +54,6 @@ getFileWithRetry()
 		fi
 		echo "$COMMAND"
 		errormsg=$(eval "$COMMAND")
-		echo "Error message is: $errormsg"
 		rt_code=$?
 		count=$(( $count + 1 ))
 	done
