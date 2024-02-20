@@ -53,7 +53,7 @@ getFileWithRetry()
 		fi
 		echo "$COMMAND"
 		errormsg=$(eval "$COMMAND")
-		echo "$errormsg"
+		echo "Error message is: $errormsg"
 		rt_code=$?
 		count=$(( $count + 1 ))
 	done
