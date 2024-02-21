@@ -37,6 +37,7 @@ getFileWithRetry()
 	set +e
 	count=0
 	rt_code=-1
+	errormsg="no message"
 	# when the command is not found (code 127), do not retry
 	while [ "$rt_code" != 0 ] && [ "$rt_code" != 127 ] && [ "$count" -le 5 ]
 	do
