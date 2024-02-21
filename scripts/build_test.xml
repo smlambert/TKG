@@ -124,8 +124,9 @@
 		<attribute name="file" />
 		<attribute name="command" />
 		<attribute name="dest" default="." />
+		<attribute name="resultproperty" />
 		<sequential>
-			<exec executable="bash" failonerror="true" dir="@{dest}">
+			<exec executable="bash" failonerror="true" dir="@{dest}" resultproperty="@{resultproperty}">
 				<arg line="${TEST_ROOT}/TKG/scripts/getFileWithRetry.sh" />
 				<arg line="--file @{file}" />
 				<arg line="--command &quot;@{command}&quot;" />
