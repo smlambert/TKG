@@ -202,7 +202,7 @@ my %base = (
 		url => 'https://dlcdn.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz',
 		fname => 'apache-maven-bin.tar.gz',
 		sha1 => '7f15c63c129f036dd5c96b1a591ed8d888f75617'
-	}
+	},
 	arctic => {
 		url => 'https://ci.adoptium.net/job/Build_Arctic/2/artifact/upload/Arctic.tar.gz',
 		fname => 'Arctic.tar.gz',
