@@ -206,7 +206,7 @@ my %base = (
 	arctic => {
 		url => 'https://ci.adoptium.net/job/Build_Arctic/2/artifact/upload/Arctic.tar.gz',
 		fname => 'Arctic.tar.gz',
-		sha1 => '9d06037b95c58cd5984a0d30105a733a9cce1ec7'
+		sha1 => '2b9ecdb5b196ecc34dd3d173bec9953429a7caa0'
 	});
 
 my %system_jars = (
