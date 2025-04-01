@@ -204,8 +204,8 @@ my %base = (
 		sha1 => '7f15c63c129f036dd5c96b1a591ed8d888f75617'
 	},
 	arctic => {
-		url => 'https://ci.adoptium.net/job/Build_Arctic/2/artifact/upload/Arctic.tar.gz',
-		fname => 'Arctic.tar.gz',
+		url => 'https://ci.adoptium.net/job/Build_Arctic/3/artifact/upload/Arctic.jar',
+		fname => 'Arctic.jar',
 		sha1 => '2b9ecdb5b196ecc34dd3d173bec9953429a7caa0'
 	});
 
